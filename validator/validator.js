@@ -35,7 +35,7 @@ const isValidEmail = function (email) {
     else return true;
   };
   
-  // validation for Profile image
+  // validation for image
   function isValidImage(value) {
     const regEx = /.+\.(?:(jpg|gif|png|jpeg|jfif))/; //It will handle all undefined, null, only numbersNaming, dot, space allowed in between
     const result = regEx.test(value);

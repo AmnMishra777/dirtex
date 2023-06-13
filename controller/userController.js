@@ -2,6 +2,7 @@ const User = require("../models/userModel");
 const asyncHandler = require('express-async-handler')
 const gt = require("../config/jwt")
 const v = require("../validator/validator")
+const uploadFile = require("../middlewares/aws")
 
 const createUser = asyncHandler( async(req, res) => {
     const email = req.body.email;
@@ -92,5 +93,7 @@ res.json({
     throw new Error(error)
    }
 })
+
+
 
 module.exports= {createUser, loginUser, updateUser ,getallUser, getaUser, deleteaUser}
