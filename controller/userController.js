@@ -2,7 +2,6 @@ const User = require("../models/userModel");
 const asyncHandler = require('express-async-handler')
 const gt = require("../config/jwt")
 const v = require("../validator/validator")
-const uploadFile = require("../middlewares/aws")
 
 const createUser = asyncHandler( async(req, res) => {
     const email = req.body.email;

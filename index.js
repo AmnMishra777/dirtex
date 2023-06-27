@@ -14,9 +14,12 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(multer().any());
 app.use('/api/user', authRouter)
 
+// Serve static files in the "uploads" directory
+app.use('/uploads', express.static('uploads'));
 
 app.use(notFound);
 app.use(errorHandler)
+
 
 
 app.listen(PORT, () => {
